@@ -1,0 +1,98 @@
+:root{
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+.d-flexs{
+    display: flex;
+    align-items: center;
+}
+.bar{
+    width: 250px;
+    height: 100vh;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    margin-right: 20px;
+    margin-left: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0.5rem;
+    transition: all 0.3s ease;
+}
+.bar:hover{
+    box-shadow: none;
+    
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+.bar a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+.bar a:last-child{
+    position: absolute;
+    bottom: 8rem;
+    width: 100%;
+}
+.bar a span{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+.bar a.active{
+    width: 100%;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+.bar a.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+.bar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+.bar a:hover{
+    color: var(--color-primary);
+}
+.bar a:hover span{
+    margin-left: 0.6rem;
+}
