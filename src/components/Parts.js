@@ -31,6 +31,7 @@ export default function Parts(){
      const showData =parts.map((data,index)=>(
                     <tr>
                         <td>{index +1}</td>
+                        <td><img src={data.image} alt='product' width="75px"/></td>
                         <td>{data.name}</td>
                         <td>{data.description}</td>
                         <td>{data.sellPrice}</td>
@@ -116,8 +117,9 @@ export default function Parts(){
                 <table>
                     <thead>
                         <tr>
-                            <th>id</th>
-                            <th>name</th>
+                            <th>Id</th>
+                            <th>Image</th>
+                            <th>Name</th>
                             <th>Description</th>
                             <th>Sell Price</th>
                             <th>Purchase Price</th>

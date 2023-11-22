@@ -8,6 +8,8 @@ function EditPart(){
     const [sell,setSell]=useState("");
     const [purchase,setPurchase]=useState("");
     const [quantity,setQuantity]=useState("");
+    const [image,setImage]=useState("");
+
     const id=window.location.pathname.split("/").slice(-1)[0];
     console.log(id)
      useEffect(()=>{
@@ -19,6 +21,7 @@ function EditPart(){
         })
         .then((res)=>res.json())
         .then((data)=>{
+            setImage(data.image)
             setName(data.name);
             setDesc(data.description);
             setSell(data.sellPrice);
@@ -28,7 +31,7 @@ function EditPart(){
         });
      },[]);
     return (
-        <Form name={name} desc={desc} sell={sell} purchase={purchase} quantity={quantity} title =" Edit Parts" endPoint={`parts/${id}`} btn="Update Part" method="put"/>
+        <Form name={name} desc={desc} sell={sell} image={image} purchase={purchase} quantity={quantity} title =" Edit Parts" endPoint={`parts/${id}`} btn="Update Part" method="put"/>
     )
 }
 export default EditPart;

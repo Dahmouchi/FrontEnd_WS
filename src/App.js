@@ -7,6 +7,12 @@ import Dashboard from './components/Dashboard'
 import RequireAuth from './auth/RequireAuth'
 import AddPart from './components/AddPart'
 import EditPart from './components/EditPart'
+import {Cart} from './client/pages/cart/cart'
+import { Shop } from './client/pages/shop/shop'
+import { CartProvider } from './client/pages/context/cartContext'
+import {Navbar} from './client/components/navbar'
+import {Footer} from './client/components/footer'
+
 
 function App() {
   return (
@@ -23,8 +29,16 @@ function App() {
             <Route path='editPart/:id' element={<EditPart/>}/>    
           </Route>
         </Route>
+       
       
       </Routes>
+      <CartProvider>
+              <Routes>
+                <Route path="/" element={<Shop />} />
+                <Route path="/cart" element={<Cart />} />
+              </Routes>
+        </CartProvider>
+
       
     </div>
   );

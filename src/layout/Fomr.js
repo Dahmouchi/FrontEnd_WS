@@ -12,6 +12,7 @@ function Form(props){
     const [sell,setSell]=useState("");
     const [purchase,setPurchase]=useState("");
     const [quantity,setQuantity]=useState("");
+    const [image,setImage]=useState("");
     const admin_id=user.auth.detail.id;
     useEffect(()=>{
         setName(props.name)
@@ -19,11 +20,13 @@ function Form(props){
         setSell(props.sell)
         setPurchase(props.purchase)
         setQuantity(props.quantity)
+        setImage(props.image)
         
-    },[props.name,props.desc,props.sell,props.purchase,props.quantity])
+    },[props.name,props.desc,props.sell,props.purchase,props.quantity,props.image])
     async function submit(e){
 
         e.preventDefault();
+        
         try{
             if(props.method==='post'){
                 let res=await axios.post(`http://127.0.0.1:8000/api/admin/${props.endPoint}`,{
@@ -33,10 +36,12 @@ function Form(props){
                 purchasePrice:purchase,
                 quantity:quantity,
                 admin_id:admin_id,
+                image:image,
                 },{
                 headers: {
                     'accept': 'application/json',
                     'Authorization': `Bearer ${user.auth.token}`,
+                    'Content-type' : 'multipart/form-data',
                 }                       
              });     
              nav('/dashboard/parts')
@@ -48,10 +53,12 @@ function Form(props){
                 purchasePrice:purchase,
                 quantity:quantity,
                 admin_id:admin_id,
+                image:image,
                 },{
                 headers: {
                     'accept': 'application/json',
                     'Authorization': `Bearer ${user.auth.token}`,
+                    'Content-type' : 'multipart/form-data',
                 }                       
              });     
              nav('/dashboard/parts')
@@ -92,7 +99,8 @@ function Form(props){
                     <input type="number" className="form-control"  placeholder="quantity" value={quantity} onChange={(e)=>setQuantity(e.target.value)} />
                 </div>
                 <div className="col-6">
-                    
+                <label htmlFor="staticEmail2" class="form-label">Image</label>
+                    <input type="file" className="form-control"  placeholder="Image"  onChange={(e)=>setImage(e.target.files.item(0))} />
                 </div>
             </div>
             <div className='row gy-2'>
