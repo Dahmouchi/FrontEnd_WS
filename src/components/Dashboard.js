@@ -7,8 +7,8 @@ import { useEffect, useState } from 'react';
 
 function Dashboard(){
 
-
     const PartNotification = usePartNotification();
+    
 
  
 
@@ -16,6 +16,7 @@ function Dashboard(){
     useEffect(() => {
 
 
+        
 
         if(PartNotification.message){
             console.log(PartNotification);

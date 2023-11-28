@@ -1,5 +1,5 @@
 import Pusher from "pusher-js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const usePartNotification = () => {
 
@@ -11,9 +11,17 @@ const usePartNotification = () => {
 
   const partsStockNotification = pusher.subscribe("parts-stock");
 
+  useEffect(() => {
+
+    
   partsStockNotification.bind("parts-stock-notification", function (data) {
     setData(data);
   });
+
+    return () => {
+      partsStockNotification.unbind("parts-stock-notification");
+    };
+  }, [partsStockNotification]);
 
   return data;
 };
