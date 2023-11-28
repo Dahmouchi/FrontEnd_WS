@@ -24,7 +24,7 @@ function App() {
         <Route element={<RequireAuth/>} >
           <Route path='/dashboard' element={<Dashboard/>}>
             <Route path='users' element={<Users/>}/>
-            <Route path='parts' element={<Parts/>}/>
+            <Route path='' element={<Parts/>}/>
             <Route path='addPart' element={<AddPart/>}/> 
             <Route path='editPart/:id' element={<EditPart/>}/>    
           </Route>

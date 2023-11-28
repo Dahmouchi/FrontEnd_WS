@@ -44,24 +44,25 @@ function Form(props){
                     'Content-type' : 'multipart/form-data',
                 }                       
              });     
-             nav('/dashboard/parts')
+             nav('/dashboard/')
             }else{
-                let res=await axios.put(`http://127.0.0.1:8000/api/admin/${props.endPoint}`,{
+                let res=await axios.post(`http://127.0.0.1:8000/api/admin/${props.endPoint}`,{
                 name:name,
                 description:desc,
                 sellPrice:sell,
                 purchasePrice:purchase,
                 quantity:quantity,
                 admin_id:admin_id,
-                image:image,
+                "_method" : "PUT",
                 },{
                 headers: {
+                    
                     'accept': 'application/json',
                     'Authorization': `Bearer ${user.auth.token}`,
                     'Content-type' : 'multipart/form-data',
                 }                       
              });     
-             nav('/dashboard/parts')
+             nav('/dashboard/')
             }
         }catch(err){
             console.log(err);           

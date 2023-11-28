@@ -11,7 +11,7 @@ export const CartItem = ({
 }) => {
     return (
         <div>
-            <img src={pic} alt="product" />
+            <center><img src={pic} alt="product" style={{width:"200px",height:"150px"}}/></center>
             <p>
                 {name} &nbsp;&nbsp;&nbsp;&nbsp; price:{price}$ ({quantity})
             </p>
