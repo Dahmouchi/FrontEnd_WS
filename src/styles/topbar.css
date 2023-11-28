@@ -21,3 +21,9 @@ h3{
   font-size: 50px;
   margin-top: 15px;
 }
+
+.icons{
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
