@@ -1,5 +1,5 @@
 import Pusher from "pusher-js";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const usePartNotification = () => {
 
