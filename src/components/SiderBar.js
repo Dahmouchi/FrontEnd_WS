@@ -7,7 +7,7 @@ export default function SideBar(){
     return(
         <>
         <div className='bar'>
-            <NavLink to ="/dashboard/parts"  activClassName='active'>
+            <NavLink to ="/dashboard/"  activClassName='active'>
                 <span><FontAwesomeIcon icon={faPuzzlePiece} /></span>
                 <h3>Parts</h3>
             </NavLink>   
@@ -23,7 +23,7 @@ export default function SideBar(){
                 <span><FontAwesomeIcon icon={faGear} /></span>
                 <h3>Setting</h3>
             </NavLink>         
-            <NavLink to ="/dashboard/Home" activClassName='active'>
+            <NavLink to ="/" activClassName='active'>
                 <span><FontAwesomeIcon icon={faHouse} /></span>
                 <h3>Home</h3>
             </NavLink>            
