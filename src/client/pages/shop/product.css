@@ -1,17 +1,18 @@
-.left{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+.lefts{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 .buy{
-  cursor: pointer;
-    height: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+cursor: pointer;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .buy:hover{
- color: black;
+color: black;
 }

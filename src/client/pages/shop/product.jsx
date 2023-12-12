@@ -17,7 +17,7 @@ export const Product = ({ id, name, price, onAddToCart, pic, desc, qnt }) => {
             <img src={pic} alt="product" />
           </div>
           <div class="bottom">
-            <div className="left">
+            <div className="lefts">
               <div class="details">
                 <h1>{name}</h1>
                 Add to Cart {productCount > 0 && <span>({productCount})</span>}

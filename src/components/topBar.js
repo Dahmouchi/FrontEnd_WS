@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 import usePartNotification from '../hooks/usePartNotification';
 export default function TopBar(){
     function logout(){
-        window.localStorage.removeItem('email');
         window.location.pathname="/login";
     }
 

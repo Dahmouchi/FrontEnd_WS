@@ -31,6 +31,9 @@ nav .wrappers{
 .wrappers .nav-links{
   display: inline-flex;
 }
+span{
+  color: rgb(179, 33, 33);
+}
 .nav-links li{
   list-style: none;
   margin-top: 20px;

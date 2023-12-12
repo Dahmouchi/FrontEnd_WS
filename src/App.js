@@ -21,14 +21,13 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/sinup" element={<SinUp/>}/>
 
-        <Route element={<RequireAuth/>} >
-        
-          <Route path='/dashboard' element={<Dashboard/>}>
-            <Route path='users' element={<Users/>}/>
-            <Route path='' element={<Parts/>}/>
-            <Route path='addPart' element={<AddPart/>}/> 
-            <Route path='editPart/:id' element={<EditPart/>}/>    
-          </Route>
+        <Route element={<RequireAuth/>} > 
+            <Route path='/dashboard' element={<Dashboard/>}>
+              <Route path='users' element={<Users/>}/>
+              <Route path='' element={<Parts/>}/>
+              <Route path='addPart' element={<AddPart/>}/> 
+              <Route path='editPart/:id' element={<EditPart/>}/>    
+            </Route>
         </Route>
       </Routes>
 
